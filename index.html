@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EasyFlashcards | Create Printable Flashcards for Free</title>
+    <meta name="description" content="A simple, free solution for creating printable flashcards. No sign-up required.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div class="contentContainer">
+            <h1 class="open-sans-title">EasyFlashcards</h1>
+            <p>Enter your terms and definitions as an ordered list below, with <b>*&</b> after every term and before the next term. You can also <a style="color:  #d6dbdf" href="#quizletDirections">import from Quizlet</a></p>
+            <p>Ex: term1*&definition*&term2*&definition2</p>
+            <br>
+            <textarea id="input">Here is the first term*&Here is the first definition*&Here is the second term*&Here is the second definition</textarea>
+            <br>
+            <button onclick="generateFlashcards()">Generate Flashcards</button>
+        </div>
+        <br>
+    </center>
+
+    <div id="quizletDirections">
+        <hr style="color: #d6dbdf">
+        <h2>Importing a Flashcard Set from Quizlet:</h2>
+        <p>To import a flashcard set from Quizlet, you first need to <b>export from Quizlet.</b> In your Quizlet set, click on the three dots and then "export". Under "Between term and definition", click on "custom" and enter "*&". Under "Between rows", click on "custom" and enter "*&". You can then click "Copy text" and paste the copied text into the text box on this page.</p>
+    </div>
+
+
+
+</body>
+
+</html>
