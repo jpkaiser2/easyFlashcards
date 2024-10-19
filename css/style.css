@@ -7,7 +7,7 @@
         "wdth" 100;
 }
 
-body{
+body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -16,8 +16,34 @@ body{
         "wdth" 100;
     background-color:  #34495e;
     color:  #d6dbdf;
+    padding-left: 40px;
+    padding-right: 40px;
 }
-textarea{
+
+textarea {
     width: 100vh;
     height: 25vh;
+}
+
+button {
+    border: 3px solid #d6dbdf;
+    background-color: #34495e;
+    color: #d6dbdf;
+    border-radius: 10px;
+    font-size: large;
+    padding: 5px;
+}
+button:hover {
+    background-color: #d6dbdf;
+    color: #34495e;
+}
+
+footer {
+    color: #d6dbdf;
+    text-align: center;
+    bottom: 0px;
+    padding: 20px;
+}
+a {
+    color: #d6dbdf;
 }
