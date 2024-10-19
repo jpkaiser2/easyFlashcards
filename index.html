@@ -9,7 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="js/main.js"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -19,11 +18,13 @@
 <body>
     <center>
         <div class="contentContainer">
-            <h1 class="open-sans-title">EasyFlashcards</h1>
-            <p>Enter your terms and definitions as an ordered list below, with <b>*&</b> after every term and before the next term. You can also <a style="color:  #d6dbdf" href="#quizletDirections">import from Quizlet</a></p>
+            <img src="logo.svg" alt="EasyFlashcards" width="15%">
+            <p>Enter your terms and definitions as an ordered list below, with <b>*&</b> after every term and before the
+                next term. You can also <a style="color:  #d6dbdf" href="#quizletDirections">import from Quizlet</a></p>
             <p>Ex: term1*&definition*&term2*&definition2</p>
             <br>
-            <textarea id="input">Here is the first term*&Here is the first definition*&Here is the second term*&Here is the second definition</textarea>
+            <textarea id="input" placeholder="Here is the first term*&Here is the first definition*&Here is the second term*&Here is the second definition"></textarea>
+            <br>
             <br>
             <button onclick="generateFlashcards()">Generate Flashcards</button>
         </div>
@@ -32,45 +33,70 @@
 
     <div id="quizletDirections">
         <hr style="color: #d6dbdf">
-        <h2>Importing a Flashcard Set from Quizlet:</h2>
-        <p>To import a flashcard set from Quizlet, you first need to <b>export from Quizlet.</b> In your Quizlet set, click on the three dots and then "export". Under "Between term and definition", click on "custom" and enter "*&". Under "Between rows", click on "custom" and enter "*&". You can then click "Copy text" and paste the copied text into the text box on this page.</p>
+        <h2>Importing a Flashcard Set from Quizlet</h2>
+        <li><strong>Export from Quizlet:</strong>
+            <ul>
+                <li>In your Quizlet set, click on the three dots.</li>
+                <li>Select "Export."</li>
+                <li>Under "Between term and definition," click on "custom" and enter "<b>*&</b>"</li>
+                <li>Under "Between rows," click on "custom" and enter "<b>*&</b>"</li>
+                <li>Click "Copy text."</li>
+            </ul>
+            <img src="quizlet.png" style="border-radius: 10px;" width="40%">
+        </li>
+
+        <li><strong>Paste into EasyFlashcards:</strong>
+            <ul>
+                <li>Paste the copied text into the text box on this page.</li>
+                <li>Click on "Generate Flashcards" to create your flashcard set</li>
+            </ul>
+        </li>
+
+        <br>
+        <br>
     </div>
     <div>
+
         <hr style="color: #d6dbdf">
         <h2>Printing your Flashcards</h2>
         <li><strong>Generate Your Flashcards:</strong>
             <ul>
                 <li>Enter your terms into EasyFlashcards or import them from Quizlet</li>
                 <li>Click on "Generate Flashcards."</li>
-                <li>Download the two PDFs that are created: one for the front terms and one for the back definitions.</li>
+                <li>Download the two PDFs that are created: one for the front terms and one for the back definitions.
+                </li>
             </ul>
         </li>
-        
+
         <li><strong>Prepare Your Printer:</strong>
             <ul>
                 <li>Load your standard 3" x 5" index cards into your printer.</li>
                 <li>Make sure your printer settings are set to print on 3" x 5" paper.</li>
             </ul>
         </li>
-        
+
         <li><strong>Print the Front Terms:</strong>
             <ul>
                 <li>Print the PDF containing the front terms.</li>
             </ul>
         </li>
-        
+
         <li><strong>Print the Back Definitions:</strong>
             <ul>
                 <li>Flip the index cards in your printer so that the printed side is facing down.</li>
                 <li>Print the PDF containing the back definitions.</li>
             </ul>
         </li>
-        
+
         <p>You now have double-sided flashcards!</p>
     </div>
+    <br>
+    <br>
 
 
-    
+
 
 </body>
+
+<footer>Created by <a href="https://www.jacobkaiserman.com" target="_blank">Jacob Kaiserman</a></footer>
 </html>
